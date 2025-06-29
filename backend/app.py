@@ -1,7 +1,7 @@
 import os
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
-from flask import Flask, session, request, redirect, url_for, render_template
+from flask import Flask, session, request, redirect, url_for, render_template, jsonify
 from flask_cors import CORS
 
 app = Flask(__name__)
@@ -15,6 +15,8 @@ app.config['SESSION_PERMANENT'] = False
 def login():
     auth_url = sp_oauth.get_authorize_url()
     return redirect(auth_url)
+def get_data():
+    return jsonify({"message": "Hello from Flask!"})
 
 @app.route('/callback')
 def callback():
