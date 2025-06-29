@@ -1,6 +1,13 @@
-.App {
-  text-align: center;
-}
+:root {
+    --gradient-start: #ff69b4;
+    --gradient-end: #800080;
+    --gradient: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+  
+    --light-pink: #ffb6c1;
+    --medium-pink: #ff1493;
+    --dark-purple: #4b0082;
+    --light-purple: #dda0dd;
+  }
 
 .App-logo {
   height: 40vmin;
