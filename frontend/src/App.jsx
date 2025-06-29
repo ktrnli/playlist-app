@@ -1,8 +1,9 @@
 import React from 'react'; 
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Home from './pages/Home';
-import About from './pages/About';
-import Contact from './pages/Contact';
+import Main from './pages/Main';
+import PlaylistEditor from './pages/PlaylistEditor';
+import Playlists from './pages/Playlists';
+import Search from './pages/Search';
 
 const App = () => {
     const handleLogin = () => {
@@ -14,16 +15,18 @@ const App = () => {
         <div className="App">
           <header className="App-header">
             <nav>
-              <Link to="/">Home</Link>
-              <Link to="/about">About</Link>
-              <Link to="/contact">Contact</Link>
+              <Link to="/">Main</Link>
+              <Link to="/playlist-editor">Playlist Editor</Link>
+              <Link to="/playlists">Playlists</Link>
+              <Link to="/search">Search</Link>
             </nav>
           </header>
           <main>
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
+              <Route path="/" element={<Main />} />
+              <Route path="/playlist-editor" element={<PlaylistEditor />} />
+              <Route path="/playlists" element={<Playlists />} />
+              <Route path="/search" element={<Search />} />
             </Routes>
           </main>
         </div>
