@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import React from 'react';
 
-export default function MyPlaylists() {
+export default function Playlists() {
   const [playlists, setPlaylists] = useState([]);
 
   useEffect(() => {

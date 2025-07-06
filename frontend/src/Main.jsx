@@ -1,21 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import App from '../App';
 import Search from './pages/Search';
-import MyPlaylists from './pages/MyPlaylists';
+import Playlists from './pages/Playlists';
 import PlaylistEditor from './pages/PlaylistEditor';
+import Home from './pages/Home';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const Main = () => (
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route path="/" element={<App />} />
+        <Route path="/" element={<Home />} />
         <Route path="/search" element={<Search />} />
-        <Route path="/playlists" element={<MyPlaylists />} />
+        <Route path="/playlists" element={<Playlists />} />
         <Route path="/edit/:id" element={<PlaylistEditor />} />
       </Routes>
     </Router>
   </React.StrictMode>
 );
-export default Main
+
+export default Main;
